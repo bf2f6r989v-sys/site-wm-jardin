@@ -16,9 +16,9 @@
                 extend: {
                     colors: {
                         brand: {
-                            bg: '#F5F2EB', /* Couleur crème du fond du logo */
-                            dark: '#1B3C2A', /* Vert sapin profond */
-                            accent: '#4ADE80', /* Vert éclatant pour le bouton */
+                            bg: '#F5F2EB',
+                            dark: '#1B3C2A',
+                            accent: '#4ADE80',
                             text: '#1F2937'
                         }
                     }
@@ -27,10 +27,10 @@
         }
     </script>
 </head>
-<body class="bg-brand-bg text-brand-text font-sans antialiased">
+<body class="bg-gray-50 text-brand-text font-sans antialiased">
 
     <!-- Navigation -->
-    <nav class="bg-brand-bg shadow-sm fixed w-full z-50">
+    <nav class="bg-brand-bg shadow-md fixed w-full z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <div class="flex-shrink-0 flex items-center">
@@ -38,112 +38,132 @@
                     <img src="image.png" alt="Logo Wm Jardin" class="h-16 w-auto object-contain">
                 </div>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#services" class="text-brand-dark hover:text-brand-accent px-3 py-2 rounded-md text-sm font-medium transition">Prestations</a>
-                    <a href="#sap" class="text-brand-dark hover:text-brand-accent px-3 py-2 rounded-md text-sm font-medium transition">Avantage Fiscal</a>
-                    <a href="#contact" class="bg-brand-accent text-brand-dark hover:bg-green-300 px-4 py-2 rounded-md text-sm font-bold transition">Devis Gratuit</a>
+                    <a href="#services" class="text-brand-dark hover:text-brand-accent px-3 py-2 rounded-md text-sm font-bold transition">Prestations</a>
+                    <a href="#sap" class="text-brand-dark hover:text-brand-accent px-3 py-2 rounded-md text-sm font-bold transition">Avantage Fiscal</a>
+                    <a href="#contact" class="bg-brand-accent text-brand-dark hover:bg-green-300 px-4 py-2 rounded-md text-sm font-bold transition shadow-sm">Devis Gratuit</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col items-center text-center">
-        <h1 class="text-4xl md:text-5xl font-extrabold text-brand-dark tracking-tight mb-4">
-            Votre jardin entre de bonnes mains
-        </h1>
-        <p class="text-xl text-gray-600 mb-8 max-w-2xl">
-            Entretien d'espaces verts à La Feuillie et ses alentours. Bénéficiez d'un travail soigné et de 50% de crédit d'impôt immédiat.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4">
-            <a href="#contact" class="bg-brand-accent text-brand-dark font-bold px-8 py-3 rounded-lg hover:bg-green-300 transition shadow-lg text-lg">Demander un devis</a>
-            <a href="#services" class="bg-white text-brand-dark border-2 border-brand-dark font-bold px-8 py-3 rounded-lg hover:bg-brand-dark hover:text-white transition shadow-lg text-lg">Découvrir nos services</a>
+    <!-- Hero Section (Bannière visuelle) -->
+    <section class="relative pt-32 pb-20 h-[600px] flex items-center justify-center text-center">
+        <!-- Image de fond -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1558904541-efa843a96f09?auto=format&fit=crop&w=1920&q=80" alt="Jardin paysager" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-brand-dark/75"></div>
+        </div>
+        
+        <!-- Contenu -->
+        <div class="relative z-10 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto flex flex-col items-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-6 drop-shadow-lg">
+                Votre jardin entre de bonnes mains
+            </h1>
+            <p class="text-xl text-gray-200 mb-10 max-w-2xl drop-shadow-md">
+                Entretien d'espaces verts à La Feuillie et ses alentours. Bénéficiez d'un travail soigné et de 50% de crédit d'impôt immédiat.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#contact" class="bg-brand-accent text-brand-dark font-bold px-8 py-3 rounded-lg hover:bg-green-300 transition shadow-xl text-lg">Demander un devis</a>
+                <a href="#services" class="bg-transparent text-white border-2 border-white font-bold px-8 py-3 rounded-lg hover:bg-white hover:text-brand-dark transition shadow-lg text-lg">Découvrir nos services</a>
+            </div>
         </div>
     </section>
 
-    <!-- Prestations -->
-    <section id="services" class="py-16 bg-white">
+    <!-- Prestations (Avec vos images personnalisées) -->
+    <section id="services" class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-brand-dark text-center mb-12">Nos Prestations</h2>
+            <h2 class="text-4xl font-extrabold text-brand-dark text-center mb-16">Nos Prestations</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Carte 1 -->
-                <div class="bg-brand-bg rounded-xl p-6 text-center shadow-md hover:shadow-xl transition">
-                    <div class="text-brand-dark text-4xl mb-4"><i class="fa-solid fa-leaf"></i></div>
-                    <h3 class="text-xl font-bold mb-2 text-brand-dark">Tonte</h3>
-                    <p class="text-gray-600">Tonte de pelouse régulière ou ponctuelle pour un gazon impeccable.</p>
+                <!-- Carte 1 : Tonte -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <img src="tonte.jpg" alt="Tonte" class="w-full h-48 object-cover object-top">
+                    <div class="p-6 text-center">
+                        <div class="text-brand-accent text-3xl mb-3"><i class="fa-solid fa-leaf"></i></div>
+                        <h3 class="text-xl font-bold mb-2 text-brand-dark">Tonte</h3>
+                        <p class="text-gray-600 text-sm">Tonte de pelouse régulière ou ponctuelle pour un gazon impeccable.</p>
+                    </div>
                 </div>
-                <!-- Carte 2 -->
-                <div class="bg-brand-bg rounded-xl p-6 text-center shadow-md hover:shadow-xl transition">
-                    <div class="text-brand-dark text-4xl mb-4"><i class="fa-solid fa-scissors"></i></div>
-                    <h3 class="text-xl font-bold mb-2 text-brand-dark">Taille</h3>
-                    <p class="text-gray-600">Taille de haies, d'arbustes et de fruitiers dans le respect du végétal.</p>
+                <!-- Carte 2 : Taille -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <img src="taille.jpg" alt="Taille" class="w-full h-48 object-cover object-top">
+                    <div class="p-6 text-center">
+                        <div class="text-brand-accent text-3xl mb-3"><i class="fa-solid fa-scissors"></i></div>
+                        <h3 class="text-xl font-bold mb-2 text-brand-dark">Taille</h3>
+                        <p class="text-gray-600 text-sm">Taille de haies, d'arbustes et de fruitiers dans le respect du végétal.</p>
+                    </div>
                 </div>
-                <!-- Carte 3 -->
-                <div class="bg-brand-bg rounded-xl p-6 text-center shadow-md hover:shadow-xl transition">
-                    <div class="text-brand-dark text-4xl mb-4"><i class="fa-solid fa-seedling"></i></div>
-                    <h3 class="text-xl font-bold mb-2 text-brand-dark">Débroussaillage</h3>
-                    <p class="text-gray-600">Remise au propre de terrains et entretien des talus.</p>
+                <!-- Carte 3 : Débroussaillage -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <img src="debroussaillage.jpg" alt="Débroussaillage" class="w-full h-48 object-cover object-top">
+                    <div class="p-6 text-center">
+                        <div class="text-brand-accent text-3xl mb-3"><i class="fa-solid fa-seedling"></i></div>
+                        <h3 class="text-xl font-bold mb-2 text-brand-dark">Débroussaillage</h3>
+                        <p class="text-gray-600 text-sm">Remise au propre de terrains et entretien des talus difficiles d'accès.</p>
+                    </div>
                 </div>
-                <!-- Carte 4 -->
-                <div class="bg-brand-bg rounded-xl p-6 text-center shadow-md hover:shadow-xl transition">
-                    <div class="text-brand-dark text-4xl mb-4"><i class="fa-solid fa-water"></i></div>
-                    <h3 class="text-xl font-bold mb-2 text-brand-dark">Nettoyage Terrasse</h3>
-                    <p class="text-gray-600">Nettoyage haute pression de vos terrasses et allées extérieures.</p>
+                <!-- Carte 4 : Nettoyage -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+                    <img src="nettoyage.jpg" alt="Nettoyage Terrasse" class="w-full h-48 object-cover object-top">
+                    <div class="p-6 text-center">
+                        <div class="text-brand-accent text-3xl mb-3"><i class="fa-solid fa-water"></i></div>
+                        <h3 class="text-xl font-bold mb-2 text-brand-dark">Nettoyage Terrasse</h3>
+                        <p class="text-gray-600 text-sm">Nettoyage haute pression de vos terrasses et allées extérieures.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- SAP & Unipros -->
-    <section id="sap" class="py-16 bg-brand-dark text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-bold mb-6">Avance Immédiate du Crédit d'Impôt</h2>
-            <p class="text-lg mb-8 max-w-3xl mx-auto text-gray-200">
-                En tant qu'adhérent à la coopérative <strong>Unipros</strong>, je vous fais bénéficier de l'avance immédiate de l'Urssaf. Vous ne payez que 50% de la facture, sans aucune avance de frais à réaliser !
+    <section id="sap" class="py-20 bg-brand-dark text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h2 class="text-4xl font-extrabold mb-6">Avance Immédiate du Crédit d'Impôt</h2>
+            <p class="text-xl mb-10 max-w-3xl mx-auto text-gray-200">
+                En tant qu'adhérent à la coopérative <strong>Unipros</strong>, je vous fais bénéficier de l'avance immédiate de l'Urssaf. Vous ne payez que 50% de la facture, sans aucune avance de frais !
             </p>
-            <div class="flex flex-col md:flex-row justify-center items-center gap-8 mb-8">
-                <div class="bg-white/10 p-6 rounded-lg border border-white/20">
-                    <p class="text-sm uppercase tracking-wider mb-2">Prestation facturée</p>
-                    <p class="text-3xl font-bold line-through text-gray-400">200 €</p>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8 mb-10">
+                <div class="bg-white/10 p-8 rounded-2xl border border-white/20 backdrop-blur-sm">
+                    <p class="text-sm uppercase tracking-wider mb-2 font-semibold">Prestation facturée</p>
+                    <p class="text-4xl font-bold line-through text-gray-400">200 €</p>
                 </div>
                 <div class="text-4xl text-brand-accent"><i class="fa-solid fa-arrow-right"></i></div>
-                <div class="bg-brand-accent p-6 rounded-lg text-brand-dark">
+                <div class="bg-brand-accent p-8 rounded-2xl text-brand-dark shadow-2xl">
                     <p class="text-sm uppercase tracking-wider mb-2 font-bold">Vous ne réglez que</p>
-                    <p class="text-4xl font-extrabold">100 €</p>
+                    <p class="text-5xl font-extrabold">100 €</p>
                 </div>
             </div>
-            <a href="Unipros_Depliant_avance_immediate_HD.pdf" target="_blank" class="inline-block bg-white text-brand-dark font-bold px-6 py-3 rounded-lg hover:bg-gray-100 transition">
+            <a href="Unipros_Depliant_avance_immediate_HD.pdf" target="_blank" class="inline-block bg-white text-brand-dark font-bold px-8 py-4 rounded-xl hover:bg-gray-100 transition shadow-lg text-lg">
                 <i class="fa-solid fa-file-pdf mr-2"></i> Consulter le dépliant explicatif
             </a>
         </div>
     </section>
 
     <!-- Contact Form -->
-    <section id="contact" class="py-16 bg-brand-bg">
+    <section id="contact" class="py-20 bg-brand-bg">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-brand-dark text-center mb-8">Demander un Devis Gratuit</h2>
+            <h2 class="text-4xl font-extrabold text-brand-dark text-center mb-10">Demander un Devis Gratuit</h2>
             
-            <form action="https://formsubmit.co/Wm.jardin76@gmail.com" method="POST" class="bg-white p-8 rounded-xl shadow-lg">
-                <!-- Configurations FormSubmit -->
+            <form action="https://formsubmit.co/wm.jardin76@gmail.com" method="POST" class="bg-white p-10 rounded-2xl shadow-2xl">
                 <input type="hidden" name="_subject" value="Nouveau devis depuis le site Wm Jardin !">
                 <input type="hidden" name="_template" value="table">
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-2">Nom complet</label>
-                        <input type="text" name="nom" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-brand-dark focus:border-brand-dark">
+                        <label class="block text-sm font-bold text-gray-700 mb-2">Nom complet</label>
+                        <input type="text" name="nom" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-accent focus:border-brand-accent transition">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-2">Téléphone</label>
-                        <input type="tel" name="telephone" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-brand-dark focus:border-brand-dark">
+                        <label class="block text-sm font-bold text-gray-700 mb-2">Téléphone</label>
+                        <input type="tel" name="telephone" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-accent focus:border-brand-accent transition">
                     </div>
                 </div>
                 <div class="mb-6">
-                    <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                    <input type="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-brand-dark focus:border-brand-dark">
+                    <label class="block text-sm font-bold text-gray-700 mb-2">Email</label>
+                    <input type="email" name="email" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-accent focus:border-brand-accent transition">
                 </div>
                 <div class="mb-6">
-                    <label class="block text-sm font-medium text-gray-700 mb-2">Prestation souhaitée</label>
-                    <select name="prestation" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-brand-dark focus:border-brand-dark">
+                    <label class="block text-sm font-bold text-gray-700 mb-2">Prestation souhaitée</label>
+                    <select name="prestation" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-accent focus:border-brand-accent transition">
                         <option value="Tonte">Tonte de pelouse</option>
                         <option value="Taille">Taille (Haies, arbustes)</option>
                         <option value="Débroussaillage">Débroussaillage</option>
@@ -151,11 +171,11 @@
                         <option value="Autre">Autre entretien</option>
                     </select>
                 </div>
-                <div class="mb-6">
-                    <label class="block text-sm font-medium text-gray-700 mb-2">Message (Surface, besoins spécifiques...)</label>
-                    <textarea name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-brand-dark focus:border-brand-dark"></textarea>
+                <div class="mb-8">
+                    <label class="block text-sm font-bold text-gray-700 mb-2">Message (Surface, besoins spécifiques...)</label>
+                    <textarea name="message" rows="4" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-accent focus:border-brand-accent transition"></textarea>
                 </div>
-                <button type="submit" class="w-full bg-brand-accent text-brand-dark font-bold px-6 py-3 rounded-lg hover:bg-green-300 transition shadow-md text-lg">
+                <button type="submit" class="w-full bg-brand-dark text-white font-bold px-6 py-4 rounded-xl hover:bg-brand-accent hover:text-brand-dark transition shadow-lg text-lg">
                     Envoyer ma demande
                 </button>
             </form>
@@ -166,22 +186,22 @@
     <footer class="bg-brand-dark text-gray-400 py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-                <img src="image.png" alt="Logo Wm Jardin" class="h-12 w-auto object-contain opacity-75 mb-4 filter grayscale">
-                <p class="text-sm">Entretien d'espaces verts et services à la personne.</p>
+                <img src="image.png" alt="Logo Wm Jardin" class="h-14 w-auto object-contain opacity-75 mb-6 filter grayscale">
+                <p class="text-sm leading-relaxed">Entretien d'espaces verts et services à la personne avec soin et professionnalisme.</p>
             </div>
             <div>
-               <h4 class="text-white font-bold mb-4">Contact</h4>
-<p class="text-sm mb-2"><i class="fa-solid fa-location-dot mr-2"></i> La Feuillie et alentours (76220)</p>
-<p class="text-sm mb-2"><i class="fa-solid fa-phone mr-2"></i> 06 15 74 13 08</p>
-<p class="text-sm mb-2"><i class="fa-solid fa-envelope mr-2"></i> Wm.jardin76@gmail.com</p>
+                <h4 class="text-white font-bold mb-6 text-lg">Contact</h4>
+                <p class="text-sm mb-3 flex items-center"><i class="fa-solid fa-location-dot w-6"></i> La Feuillie et alentours (76220)</p>
+                <p class="text-sm mb-3 flex items-center"><i class="fa-solid fa-phone w-6"></i> 06 XX XX XX XX</p>
+                <p class="text-sm mb-3 flex items-center"><i class="fa-solid fa-envelope w-6"></i> wm.jardin76@gmail.com</p>
             </div>
             <div>
-                <h4 class="text-white font-bold mb-4">Informations</h4>
-                <p class="text-sm mb-2">Service à la Personne (SAP)</p>
-                <p class="text-sm">Adhérent Coopérative Unipros</p>
+                <h4 class="text-white font-bold mb-6 text-lg">Informations</h4>
+                <p class="text-sm mb-3 flex items-center"><i class="fa-solid fa-check text-brand-accent w-6"></i> Service à la Personne (SAP)</p>
+                <p class="text-sm flex items-center"><i class="fa-solid fa-check text-brand-accent w-6"></i> Adhérent Coopérative Unipros</p>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pt-8 border-t border-gray-700 text-sm text-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-gray-700 text-sm text-center">
             &copy; 2026 Wm Jardin. Tous droits réservés.
         </div>
     </footer>
